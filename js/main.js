@@ -1,6 +1,4 @@
-let randInt = Math.floor(Math.random()*10);
 
-console.log(randInt);
 const boardContainer = document.querySelector(".container")
 
 for(let i = 1; i <= 100; i++){
@@ -13,3 +11,11 @@ for(let i = 1; i <= 100; i++){
     })
     boardContainer.append(boardCell);
 }
+
+const bombe = [];
+for(let i= 1; i <= 16; i++){
+    let randomNumber = Math.floor(Math.random()*100);
+    bombe.includes(randomNumber);
+    bombe.push(randomNumber);
+}
+console.log(bombe)
