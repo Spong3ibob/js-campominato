@@ -1,8 +1,11 @@
 const bombe = [];
 const boardContainer = document.querySelector(".container")
 const cella = document.querySelector(".box")
+const boardCell = 0;
 let randomNumber;
-for(let i = 1; i <= 100; i++){
+let i = 1;
+let a= 1; 
+while( i <= 100 ){
     const boardCell = document.createElement("div");
     boardCell.innerHTML = i;
     boardCell.classList.add("box");
@@ -11,15 +14,21 @@ for(let i = 1; i <= 100; i++){
     })
     boardContainer.append(boardCell);
 
-    for(let i= 1; i <= 16; i++){
+    while(a <= 16 ){
         let randomNumber = Math.floor(Math.random()*100);
         bombe.includes(randomNumber);
         bombe.push(randomNumber);
+        a++;
+    }
+    
+     while (bombe.includes(boardCell)){
+        console.log("bomba")
     }
 
-    boardCell.includes(randomNumber).addEventListener("click", function(){
-        cella.classList.add("colorsecondary")
-    })
+    i++;
 }
-
+// cella.includes(bombe(a)).addEventListener("click", function(){
+//     cella.classList.add("colorsecondary")
+// })
+console.log(bombe)
 
