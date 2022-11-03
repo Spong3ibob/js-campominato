@@ -54,6 +54,9 @@ main{
 .color{
     background-color: aqua;
 }
+.colorsecondary{
+    background-color: red;
+}
 
 footer{
     height: 80px;
