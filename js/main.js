@@ -1,7 +1,7 @@
 const bombe = [];
 const boardContainer = document.querySelector(".container")
 const cella = document.querySelector(".box")
-
+let randomNumber;
 for(let i = 1; i <= 100; i++){
     const boardCell = document.createElement("div");
     boardCell.innerHTML = i;
